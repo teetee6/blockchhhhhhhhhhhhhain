@@ -49,5 +49,5 @@ mtime = mtime[np.logical_not(np.isnan(mtime))]
 print("평균 블록 생성주기 = %d 초" % np.mean(mtime))
 msize = sdf2['Size'].diff().values
 msize = msize[np.logical_not(np.isnan(msize))]
-print("평균 블록 크기 = %.2lf MB" % (int(np.mean(msize)) / 1000)) 
+print("평균 블록 크기 = %.2lf KB" % (int(np.mean(msize)) / 1000)) 
 print("블록 별 평균 트랜잭션 처리 갯수 = %d 개" % np.mean(sdf3['Tx']))

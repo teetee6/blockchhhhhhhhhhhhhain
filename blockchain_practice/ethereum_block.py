@@ -10,7 +10,7 @@ df = pd.read_csv(file_path)
 
 today_timestamp = df.iloc[-1]['UnixTimeStamp']      # 파일에 기록된 the most recent day! (매일 오전 9시시간)
 mean_size = df[df['UnixTimeStamp'] > today_timestamp - (24*60*60)*180 ].mean()['Value']     
-print('180일간 생성된 블록의 평균 크기: %.2lf MB ' %(mean_size / 1000))
+print('180일간 생성된 블록의 평균 크기: %.2lf kB ' %(mean_size / 1000))
 
 
 ### 블록생성주기(Interval)
